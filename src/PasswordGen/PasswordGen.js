@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 const PasswordGen = () => {
+  document.title = 'Password Generator';
   const [password, setPassword] = useState('');
   return (
     <div className='border-2 border-white w-24'>
