@@ -3,10 +3,15 @@ import React, { useState } from 'react';
 const PasswordGen = () => {
   document.title = 'Password Generator';
   const [password, setPassword] = useState('');
+  let stringPassword = JSON.stringify(password);
 
   const getRandomPassword = () => {
-    setPassword(Math.random().toString(30).toUpperCase().substr(2));
-    console.log(password);
+    // const = 'ABCDEFGHIJKLMOPQURS'
+    const options =
+      '0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz!@#$%^&*()_+}{||[]":?><,./';
+
+    setPassword(Math.floor(Math.random().toString() * options.length));
+    console.log(stringPassword);
   };
   const savePassword = () => {
     navigator.clipboard.writeText(password);
