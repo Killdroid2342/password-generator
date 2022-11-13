@@ -22,7 +22,7 @@ const PasswordGen = () => {
         </button>
         <button
           className='btn'
-          onClick={() => navigator.clipboard.writeText(getRandomPassword)}
+          onClick={() => navigator.clipboard.writeText(password)}
         >
           Copy Password
         </button>
