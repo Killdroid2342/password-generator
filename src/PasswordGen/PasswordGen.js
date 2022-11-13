@@ -5,8 +5,7 @@ const PasswordGen = () => {
   const [password, setPassword] = useState('');
 
   const getRandomPassword = () => {
-    let max = `999999999999`;
-    setPassword(Math.floor(Math.random() * max));
+    setPassword(Math.random().toString(30).toUpperCase().substr(2));
     console.log(password);
   };
   const savePassword = () => {
