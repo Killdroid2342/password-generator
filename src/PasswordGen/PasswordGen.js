@@ -5,8 +5,13 @@ const PasswordGen = () => {
   const [password, setPassword] = useState('');
 
   const getRandomPassword = () => {
-    let max = `99999999`;
+    let max = `999999999999`;
     setPassword(Math.floor(Math.random() * max));
+    console.log(password);
+  };
+  const savePassword = () => {
+    navigator.clipboard.writeText(password);
+    alert('Copied Password');
   };
   return (
     <div className='flex flex-col items-center justify-center my-auto h-screen'>
@@ -20,10 +25,7 @@ const PasswordGen = () => {
         <button onClick={getRandomPassword} className='btn'>
           Generate Password
         </button>
-        <button
-          className='btn'
-          onClick={() => navigator.clipboard.writeText(password)}
-        >
+        <button className='btn' onClick={savePassword}>
           Copy Password
         </button>
       </div>
