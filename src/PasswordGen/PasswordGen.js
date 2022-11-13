@@ -11,7 +11,7 @@ const PasswordGen = () => {
   };
   const savePassword = () => {
     navigator.clipboard.writeText(password);
-    alert('Copied Password');
+    alert(`This is the password that you have copied: ${password}`);
   };
   return (
     <div className='flex flex-col items-center justify-center my-auto h-screen'>
