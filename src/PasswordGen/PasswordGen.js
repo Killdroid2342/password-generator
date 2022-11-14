@@ -5,8 +5,8 @@ const PasswordGen = () => {
   const [password, setPassword] = useState('');
 
   const getRandomPassword = () => {
-    const ending = '()!@#@!-';
-    setPassword(Math.random().toString(16).substr(3) + ending);
+    // const ending = '()!@#@!-';
+    setPassword(Math.random().toString(16).substr(2));
   };
   const savePassword = () => {
     navigator.clipboard.writeText(password);
