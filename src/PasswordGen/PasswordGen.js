@@ -5,15 +5,8 @@ const PasswordGen = () => {
   const [password, setPassword] = useState('');
 
   const getRandomPassword = () => {
-    const uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    const lowercase = 'abcdefghijklmnopqrstuvwxyz';
-    const numbers = '1234567890';
-    const logograms = '#$%&@^`~';
-    const mathSymbols = '<+!?=';
-    let characters = uppercase + lowercase + numbers + logograms + mathSymbols;
-    console.log(characters);
-
-    setPassword(Math.random().toString(16) + characters.length);
+    const ending = '()!@#@!-';
+    setPassword(Math.random().toString(16).substr(3) + ending);
   };
   const savePassword = () => {
     navigator.clipboard.writeText(password);
