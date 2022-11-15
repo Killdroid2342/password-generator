@@ -7,13 +7,15 @@ const PasswordGen = () => {
   const getRandomPassword = () => {
     const character =
       'adbcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY7!@#$%^&*()_+=-0123456789';
-    let passLen = '';
+    let passLen = 1;
     // let pass = '';
-    // setPassword(Math.random().toString(16).toUpperCase().substr(2));
 
-    for (let i = 0; i <= passLen; i++) {
-      setPassword(Math.floor(Math.random() * character.length));
+    for (let i = 0; i < passLen; i++) {
+      setPassword(Math.random().toString(16).toUpperCase().substr(2));
     }
+    // // for (let i = 0; i < passLen; i++) {
+    // setPassword(Math.floor(Math.random() * character.length));
+    // // }
   };
   // console.log(getRandomPassword);
   const savePassword = () => {
