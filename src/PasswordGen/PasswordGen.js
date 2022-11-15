@@ -5,17 +5,17 @@ const PasswordGen = () => {
   const [password, setPassword] = useState('Click Button To Generate Password');
 
   const getRandomPassword = () => {
-    const character =
-      'adbcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY7!@#$%^&*()_+=-0123456789';
-    let passLen = 1;
-    // let pass = '';
+    let string =
+      '123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*';
 
-    for (let i = 0; i < passLen; i++) {
-      setPassword(Math.random().toString(16).toUpperCase().substr(2));
+    let resultString = '';
+    for (let i = 0; i <= 15; i++) {
+      setPassword(
+        (resultString += string.charAt(
+          Math.floor(Math.random(15) * string.length)
+        ))
+      );
     }
-    // // for (let i = 0; i < passLen; i++) {
-    // setPassword(Math.floor(Math.random() * character.length));
-    // // }
   };
   // console.log(getRandomPassword);
   const savePassword = () => {
