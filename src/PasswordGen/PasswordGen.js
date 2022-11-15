@@ -2,12 +2,20 @@ import React, { useState } from 'react';
 
 const PasswordGen = () => {
   document.title = 'Password Generator';
-  const [password, setPassword] = useState('');
+  const [password, setPassword] = useState('Click Button To Generate Password');
 
   const getRandomPassword = () => {
-    // const ending = '()!@#@!-';
-    setPassword(Math.random().toString(16).substr(2));
+    const character =
+      'adbcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY7!@#$%^&*()_+=-0123456789';
+    let passLen = '';
+    // let pass = '';
+    // setPassword(Math.random().toString(16).toUpperCase().substr(2));
+
+    for (let i = 0; i <= passLen; i++) {
+      setPassword(Math.floor(Math.random() * character.length));
+    }
   };
+  // console.log(getRandomPassword);
   const savePassword = () => {
     navigator.clipboard.writeText(password);
     alert(`This is the password that you have copied: ${password}`);
