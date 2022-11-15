@@ -11,7 +11,7 @@ const PasswordGen = () => {
     for (let i = 0; i <= 15; i++) {
       setPassword(
         (resultString += string.charAt(
-          Math.floor(Math.random(15) * string.length)
+          Math.floor(Math.random() * string.length)
         ))
       );
     }
