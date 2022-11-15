@@ -7,7 +7,6 @@ const PasswordGen = () => {
   const getRandomPassword = () => {
     let string =
       '123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*';
-
     let resultString = '';
     for (let i = 0; i <= 15; i++) {
       setPassword(
@@ -17,7 +16,6 @@ const PasswordGen = () => {
       );
     }
   };
-  // console.log(getRandomPassword);
   const savePassword = () => {
     navigator.clipboard.writeText(password);
     alert(`This is the password that you have copied: ${password}`);
