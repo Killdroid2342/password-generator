@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Password Generator
 
 This user-friendly password generator offers a quick and easy solution for creating strong, unique passwords on demand, enhancing your online security with just a click. You can customize password length and complexity, making it a valuable tool for safeguarding your digital accounts.
@@ -47,6 +46,3 @@ https://password-generator-beta-eight.vercel.app/
 ## Built With
 
 - React (JavaScript)
-=======
-This project allows you to create any safe password if you can not think of one.
->>>>>>> 8a192b4e7b5197749b0aa032bef43fe79523125f
